@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sportivo"
+        android:textAlignment="center"
+        android:textSize="45sp"
+        android:id="@+id/sportivotext"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sportivotext"
+        android:text="The hub of Sports Opportunities"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:id="@+id/caption"
+        android:textAlignment="center"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative"
+        android:layout_below="@+id/caption"
+        android:layout_above="@id/continuebutton"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/footballer"
+            android:id="@+id/firstscreenimage"/>
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/googleandfbrelativelayout"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/layout_background"
+            android:orientation="vertical"
+            android:alpha="0">
+            
+
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/google_button"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/googleloginbutton"
+                android:text="GOOGLE"
+                android:textAllCaps="false"
+                android:fontFamily="serif-monospace"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/red"/>
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/googleloginbutton"
+                android:background="@drawable/facebook_login"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:text="FACEBOOK"
+                android:id="@+id/facebookloginbutton"
+                android:textAllCaps="false"
+                android:fontFamily="serif-monospace"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="Sign in"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        android:id="@+id/continuebutton"
+        android:textColor="@color/white"
+        android:fontFamily="casual"
+        android:background="@drawable/continuebutton"/>
+
+
+</RelativeLayout>

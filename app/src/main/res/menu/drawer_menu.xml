@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account_circle_black_24dp"
+            android:title="Edit Profile" />
+
+
+        <item
+
+            android:id="@+id/nav_registration"
+            android:icon="@drawable/ic_registration_edit_black_24dp"
+            android:title="Your Registrations" />
+
+        <item
+
+            android:id="@+id/nav_savedevents"
+            android:icon="@drawable/ic_event_black_24dp"
+            android:title="Saved Events" />
+
+        <item
+
+            android:id="@+id/nav_hostevent"
+            android:icon="@drawable/ic_event_black_24dp"
+            android:title="Host Event" />
+
+        <item
+
+            android:id="@+id/nav_appsettings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="App Settings" />
+
+    </group>
+
+
+    <item android:title="This is Sportivo">
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_help_black_24dp"
+                android:title="Help" />
+
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/ic_feedback_black_24dp"
+                android:title="Feedback" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout_new_black_24dp"
+                android:title="Log out" />
+
+        </menu>
+
+
+    </item>
+
+
+</menu>
