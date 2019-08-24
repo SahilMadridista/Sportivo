@@ -29,16 +29,6 @@
             android:textAlignment="center"
             android:layout_below="@id/profileimage"/>
 
-
-
-
-
-
-
     </RelativeLayout>
-
-
-
-
 
 </RelativeLayout>
