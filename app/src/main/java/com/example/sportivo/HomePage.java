@@ -7,15 +7,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
-
 import com.google.android.material.navigation.NavigationView;
 
-public class HomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class HomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener , AdapterView.OnItemSelectedListener {
 
     private DrawerLayout drawer;
 
@@ -25,6 +27,20 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+        //Spinner started
+
+        Spinner spinner = (Spinner)findViewById(R.id.sportsnamespinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.numbers,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
+
+
+        //Spinner ended
+
+        //Drawer thing started
+
 
         drawer = (DrawerLayout)findViewById(R.id.drawerlayouthomepage);
         NavigationView navigationView = (NavigationView)findViewById(R.id.nav_view);
@@ -42,17 +58,17 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-
-        /*RelativeLayout relativeLayout = (RelativeLayout)findViewById(R.id.drawerlayouthomepage);
-        AnimationDrawable animationDrawable = (AnimationDrawable)relativeLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(2000);
-        animationDrawable.setExitFadeDuration(6000);
-        animationDrawable.start();*/
+        //Drawer thing ended
+        
 
 
     }
 
     //End of OnCreate
+
+
+
+    // Switch case for changing the activities for nav drawer started
 
 
     @Override
@@ -86,14 +102,11 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
 
         }
 
-
         return true;
 
-
-
-
-
     }
+
+    // Switch case for changing the activities for nav drawer ended
 
 
 
@@ -111,6 +124,20 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
     }
 
     //On Back Pressed ends here
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+        String text = adapterView.getItemAtPosition(i).toString();
+        Toast.makeText(adapterView.getContext(),text+ " is selected",Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
+
 
 
 }

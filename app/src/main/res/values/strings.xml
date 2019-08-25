@@ -5,4 +5,26 @@
 
     <string name="navigation_drawer_close">Close navigation Drawer</string>
 
+    <string-array name="numbers">
+
+        <item>Cricket</item>
+
+        <item>Football</item>
+
+        <item>Basketball</item>
+
+        <item>Chess</item>
+
+        <item>Volleyball</item>
+
+        <item>Tennis</item>
+
+        <item>Badminton</item>
+
+        <item>Hockey</item>
+
+        <item>Swimming</item>
+
+    </string-array>
+
 </resources>
