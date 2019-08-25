@@ -59,7 +59,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         toggle.syncState();
 
         //Drawer thing ended
-        
+
 
 
     }
