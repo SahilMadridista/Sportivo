@@ -59,13 +59,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         toggle.syncState();
 
         //Drawer thing ended
-
-
-        /*RelativeLayout relativeLayout = (RelativeLayout)findViewById(R.id.drawerlayouthomepage);
-        AnimationDrawable animationDrawable = (AnimationDrawable)relativeLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(2000);
-        animationDrawable.setExitFadeDuration(6000);
-        animationDrawable.start();*/
+        
 
 
     }
