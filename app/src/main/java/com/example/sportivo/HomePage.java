@@ -1,12 +1,14 @@
 package com.example.sportivo;
 
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -20,6 +22,7 @@ import com.google.android.material.navigation.NavigationView;
 public class HomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener , AdapterView.OnItemSelectedListener {
 
     private DrawerLayout drawer;
+    public static FragmentManager fragmentManager;
 
     //OnCreate starts here
 
@@ -28,23 +31,24 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        //Spinner started
+        fragmentManager = getSupportFragmentManager();
 
-        Spinner spinner = (Spinner)findViewById(R.id.sportsnamespinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.numbers,android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
+        if(findViewById(R.id.fragment_container)!=null)
+        {
+            if(savedInstanceState!=null)
+                return;
+            FragmentTransaction ft = fragmentManager.beginTransaction();
+            ft.add(R.id.fragment_container,new HomeBackgroundFragment(),null).commit();
+        }
 
 
-        //Spinner ended
+
 
         //Drawer thing started
 
-
         drawer = (DrawerLayout)findViewById(R.id.drawerlayouthomepage);
         NavigationView navigationView = (NavigationView)findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(HomePage.this);
 
 
         Toast.makeText(HomePage.this,"Welcome to Sportivo",Toast.LENGTH_SHORT).show();
@@ -59,13 +63,9 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
         toggle.syncState();
 
         //Drawer thing ended
-
-
-
     }
 
     //End of OnCreate
-
 
 
     // Switch case for changing the activities for nav drawer started
@@ -99,7 +99,6 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
                 Intent hostevent = new Intent(this,HostEvent.class);
                 startActivity(hostevent);
                 break;
-
         }
 
         return true;
@@ -109,9 +108,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
     // Switch case for changing the activities for nav drawer ended
 
 
-
     //On Back Pressed starts here
-
 
     @Override
     public void onBackPressed() {
@@ -137,7 +134,6 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
     public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
-
 
 
 }
