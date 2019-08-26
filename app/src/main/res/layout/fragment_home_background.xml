@@ -7,38 +7,44 @@
     android:layout_height="match_parent"
     android:background="@color/silver">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:background="@color/colorPrimaryDark"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="40dp">
+        <!--
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/toolbar"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:elevation="4dp"/>
+            -->
 
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:id="@+id/sportsnamespinner"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/sportsnamespinner" />
 
-    <TextView
-        android:id="@+id/hometext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Home Page"
-        android:textAlignment="center"
-        android:textSize="40sp" />
+        <TextView
+            android:id="@+id/hometext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home Page"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="96dp"
-        android:text="Button" />
-    </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Button"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/gradient"
+            android:textColor="@color/silver"/>
+
+    </RelativeLayout>
 
 </FrameLayout>
