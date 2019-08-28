@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cardviewxml">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cardview"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/insiderelativelayout">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:id="@+id/titleimage"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:layout_below="@id/titleimage"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:fontFamily="serif-monospace"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:id="@+id/titletext"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:layout_below="@id/titletext"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:layout_above="@id/readmorebutton"
+                android:textSize="15sp"
+                android:fontFamily="serif-monospace"
+                android:textStyle="bold"
+                android:id="@+id/descriptiontext"
+                />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Read More"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:id="@+id/readmorebutton"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="serif-monospace"
+                android:textStyle="bold"
+                android:background="@color/colorPrimaryDark"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
