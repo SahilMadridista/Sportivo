@@ -3,27 +3,33 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardviewxml">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/cardview"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="20dp"
         >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:background="@drawable/layout_background_curve"
             android:id="@+id/insiderelativelayout">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:id="@+id/titleimage"/>
+                android:layout_height="200dp"
+                android:background="@drawable/layout_background_curve"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/titleimage" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -38,11 +44,11 @@
                 android:id="@+id/titletext"
                 />
 
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Description"
+                android:layout_marginTop="10dp"
                 android:layout_below="@id/titletext"
                 android:textAlignment="center"
                 android:textColor="#000"
@@ -64,6 +70,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="30dp"
                 android:fontFamily="serif-monospace"
+                android:elevation="30dp"
                 android:textStyle="bold"
                 android:background="@color/colorPrimaryDark"/>
 
