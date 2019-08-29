@@ -58,33 +58,9 @@ public class HomeBackgroundFragment extends Fragment {
 
         return view;
 
-        /*Spinner started
-
-        Spinner spinner = (Spinner)view.findViewById(R.id.sportsnamespinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),R.array.numbers,android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-                Object item=adapterView.getItemAtPosition(i);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-
-        return view;
-
-        //Spinner ended
-
-        */
-
     }
+
+    //Class for RecyclerView Started
 
     private class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
@@ -134,4 +110,7 @@ public class HomeBackgroundFragment extends Fragment {
             return mList.size();
         }
     }
+
+    //Class for recyclerView Ended
+
 }

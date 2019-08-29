@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toast.makeText(MainActivity.this,"Welcome to Sportivo",Toast.LENGTH_SHORT).show();
+
         continuebutton = (Button) findViewById(R.id.continuebutton);
 
         googlelogin = (Button)findViewById(R.id.googleloginbutton);

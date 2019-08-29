@@ -6,16 +6,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.Spinner;
 import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
@@ -23,6 +26,16 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
 
     private DrawerLayout drawer;
     public static FragmentManager fragmentManager;
+    private Spinner spinner;
+
+    HomeBackgroundFragment cricket_fragment;
+    Football_fragment football_fragment;
+    Basketball_Fragment basketball_fragment;
+    Chess_Fragment chess_fragment;
+    Volleyball_Fragment volleyball_fragment;
+    Tennis_Fragment tennis_fragment;
+    Badminton_Fragment badminton_fragment;
+    Hockey_Fragment hockey_fragment;
 
     //OnCreate starts here
 
@@ -30,6 +43,17 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+        spinner = (Spinner)findViewById(R.id.sportsnamespinner);
+
+        cricket_fragment = new HomeBackgroundFragment();
+        football_fragment = new Football_fragment();
+        basketball_fragment = new Basketball_Fragment();
+        chess_fragment = new Chess_Fragment();
+        volleyball_fragment = new Volleyball_Fragment();
+        tennis_fragment = new Tennis_Fragment();
+        badminton_fragment = new Badminton_Fragment();
+        hockey_fragment = new Hockey_Fragment();
 
 
         fragmentManager = getSupportFragmentManager();
@@ -42,17 +66,81 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
             ft.add(R.id.fragment_container,new HomeBackgroundFragment(),null).commit();
         }
 
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(HomePage.this,
+                R.layout.custom_spinner,getResources().getStringArray(R.array.sports_names));
 
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+        spinner.setAdapter(adapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                switch (i){
+
+                    case 0:
+                        setfragment(cricket_fragment);
+                        Toast.makeText(HomePage.this,"You are in Cricket section",Toast.LENGTH_SHORT)
+                                .show();
+                        break;
+
+                    case 1:
+                        setfragment(football_fragment);
+                        Toast.makeText(HomePage.this,"You are in Football section",Toast.LENGTH_SHORT)
+                                .show();
+                        break;
+
+                    case 2:
+                        setfragment(basketball_fragment);
+                        Toast.makeText(HomePage.this,"You are in Basketball section",Toast.LENGTH_SHORT)
+                                .show();
+                        break;
+
+                    case 3:
+                        setfragment(chess_fragment);
+                        Toast.makeText(HomePage.this,"You are in Chess section",Toast.LENGTH_SHORT)
+                                .show();
+                        break;
+
+                    case 4:
+                        setfragment(volleyball_fragment);
+                        Toast.makeText(HomePage.this,"You are in Volleyball section",Toast.LENGTH_SHORT)
+                                .show();
+                        break;
+
+                    case 5:
+                        setfragment(tennis_fragment);
+                        Toast.makeText(HomePage.this,"You are in Tennis section",Toast.LENGTH_SHORT)
+                                .show();
+                        break;
+
+                    case 6:
+                        setfragment(badminton_fragment);
+                        Toast.makeText(HomePage.this,"You are in Badminton section",Toast.LENGTH_SHORT)
+                                .show();
+                        break;
+
+                    case 7:
+                        setfragment(hockey_fragment);
+                        Toast.makeText(HomePage.this,"You are in Hockey section",Toast.LENGTH_SHORT)
+                                .show();
+                        break;
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
         //Drawer thing started
 
         drawer = (DrawerLayout)findViewById(R.id.drawerlayouthomepage);
         NavigationView navigationView = (NavigationView)findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(HomePage.this);
-
-
-        Toast.makeText(HomePage.this,"Welcome to Sportivo",Toast.LENGTH_SHORT).show();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -135,6 +223,16 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
     public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
+
+    public void setfragment(Fragment fragment){
+
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container,fragment);
+        fragmentTransaction.commit();
+
+    }
+
+
 
 
 }

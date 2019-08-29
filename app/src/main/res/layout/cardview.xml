@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/cardview"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="0dp"
         android:layout_marginTop="16dp"
         app:cardCornerRadius="20dp"
         >
@@ -18,14 +18,14 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/layout_background_curve"
-            android:id="@+id/insiderelativelayout">
+            android:id="@+id/insiderelativelayout"
+            android:background="@drawable/layout_background_curve">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:background="@drawable/layout_background_curve"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/layout_background_curve"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"

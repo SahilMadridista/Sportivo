@@ -12,10 +12,10 @@
     android:id="@+id/drawerlayouthomepage"
     tools:openDrawer="start">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:id="@+id/drawerrelativelayout">
 
 
         <androidx.appcompat.widget.Toolbar
@@ -27,6 +27,16 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             android:elevation="4dp">
 
+
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/sportsnamespinner"
+                android:backgroundTint="@color/white"
+                android:layout_marginLeft="150dp"
+                />
+
         </androidx.appcompat.widget.Toolbar>
 
 
@@ -34,10 +44,11 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/fragment_container"/>
+            android:id="@+id/fragment_container"
+            android:layout_below="@id/toolbar"/>
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 
