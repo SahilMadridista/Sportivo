@@ -21,6 +21,7 @@ import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class HomePage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener , AdapterView.OnItemSelectedListener {
 
@@ -37,12 +38,20 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
     Badminton_Fragment badminton_fragment;
     Hockey_Fragment hockey_fragment;
 
+    FirebaseAuth mAuth;
+
     //OnCreate starts here
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+        mAuth = FirebaseAuth.getInstance();
+        if(mAuth.getCurrentUser()==null) {
+            finish();
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        }
 
         spinner = (Spinner)findViewById(R.id.sportsnamespinner);
 
@@ -188,6 +197,11 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
                 Intent hostevent = new Intent(this,HostEvent.class);
                 startActivity(hostevent);
                 break;
+
+            case R.id.nav_logout:
+                mAuth.signOut();
+                finish();
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
 
         return true;

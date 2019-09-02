@@ -8,21 +8,13 @@
     <string-array name="sports_names">
 
         <item>Cricket</item>
-
         <item>Football</item>
-
         <item>Basketball</item>
-
         <item>Chess</item>
-
         <item>Volleyball</item>
-
         <item>Tennis</item>
-
         <item>Badminton</item>
-
         <item>Hockey</item>
-
 
     </string-array>
 

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "245780501382",
+    "firebase_url": "https://sportivo-30679.firebaseio.com",
+    "project_id": "sportivo-30679",
+    "storage_bucket": "sportivo-30679.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245780501382:android:bb47f946a9654f1a",
+        "android_client_info": {
+          "package_name": "com.example.sportivo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245780501382-c17sfo7u019rch0o4qm76q8uc22n4t2u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sportivo",
+            "certificate_hash": "174948ae0e94b01b1c0e1ca875f52f6947f1b3e2"
+          }
+        },
+        {
+          "client_id": "245780501382-6vd0m7t6lva1n1j0gfi7pdkvph78jflu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhpY9WmDPVzXdP_xN5DsgvQzW9v4SQJVo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245780501382-6vd0m7t6lva1n1j0gfi7pdkvph78jflu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
