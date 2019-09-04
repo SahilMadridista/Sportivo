@@ -3,9 +3,8 @@
 
     <gradient
         android:angle="225"
-        android:startColor="@color/black"
-        android:centerColor="@color/maroon"
-        android:endColor="@color/black">
+        android:startColor="@color/light_blue"
+        android:endColor="@color/dark_grey">
     </gradient>
 
 

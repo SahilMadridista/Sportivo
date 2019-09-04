@@ -1,14 +1,16 @@
 package com.example.sportivo;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -17,7 +19,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,10 +29,11 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int RC_SIGN_IN = 1108;
     private static final String TAG ="sportivotag" ;
-    private Button continuebutton , googlelogin , facebooklogin;
+    private Button googlelogin , phonenumberlogin;
     private long backpressedtime;
     private Toast backtoast;
     private RelativeLayout appearinglayout;
+    private TextView app_name , slogan;
 
     GoogleSignInClient mGoogleSignInClient;
 
@@ -53,19 +55,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, HomePage.class));
         }
 
-        continuebutton = (Button) findViewById(R.id.continuebutton);
 
         googlelogin = (Button)findViewById(R.id.googleloginbutton);
-        facebooklogin = (Button)findViewById(R.id.facebookloginbutton);
-
-        appearinglayout = (RelativeLayout)findViewById(R.id.googleandfbrelativelayout);
-
-        continuebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                appearloginlayout();
-            }
-        });
+        phonenumberlogin = (Button)findViewById(R.id.phoneloginbutton);
 
         googlelogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,31 +130,8 @@ public class MainActivity extends AppCompatActivity {
 
     //OnCreate ended here
 
-    //Homepage opening method started
-
-    public void openHomePage(){
-        Intent intent = new Intent(MainActivity.this,HomePage.class);
-        startActivity(intent);
-    }
-
-    //Homepage opening method ended
-
-
-
-    //login layout appearance start
-
-    public void appearloginlayout(){
-        appearinglayout.animate().alpha(1).setDuration(200);
-    }
-
-    //slide layout appearance ends
-
-
-
 
     //Backpressed started here
-
-
 
 
     @Override
@@ -173,7 +142,8 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         else {
-            backtoast= Toast.makeText(MainActivity.this,"Press back again to exit",Toast.
+            backtoast= Toast.makeText(MainActivity.this,
+                    "Press back again to exit",Toast.
                     LENGTH_SHORT);
             backtoast.show();
 
@@ -182,6 +152,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Backpressed ended here
-
 
 }
