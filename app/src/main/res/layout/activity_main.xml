@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/gradient"
+    android:background="@drawable/gradient_1"
     android:orientation="vertical">
 
 
@@ -19,7 +19,7 @@
         android:id="@+id/sportivotext"
         android:fontFamily="serif-monospace"
         android:textStyle="bold"
-        android:textColor="@color/white"
+        android:textColor="@color/yellow"
         android:layout_marginTop="50dp"/>
 
     <TextView
@@ -28,21 +28,21 @@
         android:layout_below="@+id/sportivotext"
         android:text="The hub of Sports Opportunities"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+        android:textColor="@color/yellow"
         android:textSize="18sp"
-        android:id="@+id/caption"
+        android:id="@+id/slogan"
         android:textAlignment="center"
         android:fontFamily="serif-monospace"
         android:textStyle="bold"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/relative"
-        android:layout_below="@+id/caption"
-        android:layout_above="@id/continuebutton"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp">
+        android:layout_above="@+id/googleloginbutton"
+        android:layout_below="@+id/slogan"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
 
 
         <ImageView
@@ -51,68 +51,38 @@
             android:src="@drawable/footballer"
             android:id="@+id/firstscreenimage"/>
 
-        <RelativeLayout
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/googleandfbrelativelayout"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/layout_background"
-            android:orientation="vertical"
-            android:alpha="0">
-            
-
-
-            <Button
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/google_button"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/googleloginbutton"
-                android:text="GOOGLE"
-                android:textAllCaps="false"
-                android:fontFamily="serif-monospace"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textColor="@color/red"/>
-
-            <Button
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/googleloginbutton"
-                android:background="@drawable/facebook_login"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="30dp"
-                android:text="FACEBOOK"
-                android:id="@+id/facebookloginbutton"
-                android:textAllCaps="false"
-                android:fontFamily="serif-monospace"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textColor="@color/white"/>
-
-        </RelativeLayout>
-
-
     </RelativeLayout>
 
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/google_button"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/googleloginbutton"
+        android:text="Login with Google"
+        android:layout_marginBottom="10dp"
+        android:textAllCaps="false"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:layout_above="@+id/phoneloginbutton"
+        android:textAlignment="center"
+        android:textColor="@color/red"/>
 
     <Button
-        android:layout_width="300dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
-        android:text="Sign in"
+        android:layout_marginBottom="10dp"
+        android:text="Login with Phone"
+        android:background="@drawable/phone_login"
+        android:id="@+id/phoneloginbutton"
         android:textAllCaps="false"
-        android:textSize="25sp"
-        android:id="@+id/continuebutton"
-        android:textColor="@color/white"
-        android:fontFamily="casual"
-        android:background="@drawable/continuebutton"/>
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/purple"
+        android:layout_alignParentBottom="true"/>
+
 
 
 </RelativeLayout>
