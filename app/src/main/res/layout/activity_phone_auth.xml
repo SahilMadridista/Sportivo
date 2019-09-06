@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhoneAuthActivity"
+    android:background="@drawable/gradient_1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layoutbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/countrycode"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:hint=" +91"
+            android:background="@color/white"
+            android:textSize="22sp">
+            </EditText>
+        <EditText
+            android:id="@+id/phonenumber"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:hint=" Phone Number"
+            android:textSize="22sp"
+            android:background="@color/white"
+            android:layout_weight="4">
+        </EditText>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/layoutbox"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text=" SUBMIT "
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:background="@color/light_blue" />
+
+</RelativeLayout>
