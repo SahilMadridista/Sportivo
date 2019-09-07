@@ -59,6 +59,18 @@ public class MainActivity extends AppCompatActivity {
         googlelogin = (Button)findViewById(R.id.googleloginbutton);
         phonenumberlogin = (Button)findViewById(R.id.phoneloginbutton);
 
+
+        //Phone authorisation button starts here
+
+        phonenumberlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                startActivity(new Intent(getApplicationContext(),PhoneAuthActivity.class));
+            }
+        });
+        //Phone authorisation button ended
+
         googlelogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
