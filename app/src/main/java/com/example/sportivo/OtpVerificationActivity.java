@@ -1,16 +1,15 @@
 package com.example.sportivo;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -110,7 +109,7 @@ public class OtpVerificationActivity extends AppCompatActivity {
     //Sending the verification code to the user
     private void sendVerificationCode(String phone)
     {
-        progressBar.setVisibility(View.VISIBLE);
+
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 phone,        // Phone number to verify
                 100,                 // Timeout duration

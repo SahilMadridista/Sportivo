@@ -7,52 +7,83 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PhoneAuthActivity"
-    android:background="@drawable/gradient_1"
-    android:orientation="vertical">
+    android:background="@color/light_blue"
+    >
 
-    <LinearLayout
-        android:id="@+id/layoutbox"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="100dp"
-        android:orientation="horizontal">
+        android:text="Enter Your Phone Number"
+        android:textAlignment="center"
+        android:fontFamily="monospace"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        android:id="@+id/enter_phone_text"
+        android:layout_marginTop="?attr/actionBarSize"/>
 
-        <EditText
-            android:id="@+id/countrycode"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:hint=" +91"
-            android:background="@color/white"
-            android:textSize="22sp">
-            </EditText>
-        <EditText
-            android:id="@+id/phonenumber"
-            android:layout_margin="10dp"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:hint=" Phone Number"
-            android:textSize="22sp"
-            android:background="@color/white"
-            android:layout_weight="4">
-        </EditText>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enter_phone_text"
+        android:layout_above="@id/submit"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
 
-    </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/inside_input_layout">
+
+            <RelativeLayout
+                android:layout_width="270dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true">
+
+                <EditText
+
+                    android:id="@+id/countrycode"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="+91"
+                    android:fontFamily="monospace"
+                    android:textStyle="bold"
+                    android:inputType="number"
+                    android:layout_centerVertical="true"
+                    android:textSize="22sp" />
+
+                <EditText
+
+                    android:id="@+id/phonenumber"
+                    android:layout_width="220dp"
+                    android:layout_height="50dp"
+                    android:fontFamily="monospace"
+                    android:layout_centerVertical="true"
+                    android:hint="Phone Number"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:inputType="number"
+                    android:layout_toRightOf="@id/countrycode"
+                    android:layout_weight="4"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_below="@id/layoutbox"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:background="@drawable/verify_button"
+        android:textStyle="bold"
         android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:text=" SUBMIT "
+        android:text="Send OTP"
+        android:layout_centerInParent="true"
+        android:fontFamily="monospace"
+        android:textAllCaps="false"
         android:textSize="22sp"
-        android:textColor="@color/white"
-        android:background="@color/light_blue" />
+        android:textColor="@color/black"/>
 
 </RelativeLayout>
