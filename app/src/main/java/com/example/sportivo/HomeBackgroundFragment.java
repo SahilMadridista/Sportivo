@@ -1,29 +1,27 @@
 package com.example.sportivo;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.TextView;
+
+import com.google.firebase.database.DatabaseReference;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class HomeBackgroundFragment extends Fragment {
+
+    private RecyclerView opportunityListCards;
+    private DatabaseReference databaseReference , usersref;
 
 
     public HomeBackgroundFragment() {
@@ -50,8 +48,6 @@ public class HomeBackgroundFragment extends Fragment {
         titles.add("8");
         titles.add("9");
         titles.add("10");
-
-
         RecyclerView recyclerView = view.findViewById(R.id.opportunitylistcards);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(new RecyclerViewAdapter(titles));
@@ -109,8 +105,9 @@ public class HomeBackgroundFragment extends Fragment {
         public int getItemCount() {
             return mList.size();
         }
+
     }
 
-    //Class for recyclerView Ended
+    //Class for recyclerview ended
 
 }
