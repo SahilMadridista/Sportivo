@@ -1,6 +1,8 @@
 Sportivo is an Android application that is developed on Android Studio using Java, XML, Firebase and different libraries. 
 This application is developed for the sportspersons that are not much aware of the sports events happening near them.
 
+------------------------------------------------------
+
 Steps to use Sportivo-
 
 1) The user have to create an account first. He/She can create an account using his/her email.
@@ -16,9 +18,11 @@ by the admin application.
 
 These were the steps to use the application.
 
+------------------------------------------------------
+
 You can check the app screenshots here- https://drive.google.com/drive/folders/15txFGbJNuuAdrGbFpWrZnFcfQ7YbmVXD?usp=sharing
 
-
+------------------------------------------------------
 
 Technoogies used-
 
@@ -31,6 +35,8 @@ Technoogies used-
 4) Lottie is used for animation.
 
 5) Picasso for loading images into the app.
+
+------------------------------------------------------
 
 What to implement in the application next-
 
