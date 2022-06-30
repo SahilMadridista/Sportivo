@@ -18,6 +18,8 @@ These were the steps to use the application.
 
 You can check the app screenshots here- https://drive.google.com/drive/folders/15txFGbJNuuAdrGbFpWrZnFcfQ7YbmVXD?usp=sharing
 
+
+
 Technoogies used-
 
 1) Java as the main programming language.
