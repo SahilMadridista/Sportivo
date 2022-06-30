@@ -18,6 +18,18 @@ These were the steps to use the application.
 
 You can check the app screenshots here- https://drive.google.com/drive/folders/15txFGbJNuuAdrGbFpWrZnFcfQ7YbmVXD?usp=sharing
 
+Technoogies used-
+
+1) Java as the main programming language.
+
+2) XML is used for making the user interface.
+
+3) Firebase as the backend and database.
+
+4) Lottie is used for animation.
+
+5) Picasso for loading images into the app.
+
 What to implement in the application next-
 
 I was thinking to implement more in this application.
